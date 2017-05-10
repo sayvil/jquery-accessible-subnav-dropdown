@@ -145,6 +145,14 @@ $(document).ready(function() {
             event.preventDefault();
          }
 
+         // event ESC: close menu if open
+         if (event.keyCode == 27) {
+           $subnav.attr({
+              'data-visually-hidden': 'true'
+           });
+           event.preventDefault();   
+         }       
+
          // event shift + tab 
          if (event.shiftKey && event.keyCode == 9) {
             if ($parent_item.is(".js-nav-system__item:first-child")) {
